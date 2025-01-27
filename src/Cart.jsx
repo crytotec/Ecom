@@ -17,7 +17,7 @@ function Cart({ cart, updateCart }) {
   return (
     <div className="p-4">
       {/* Header Section */}
-      <div className="grid grid-cols-5 bg-[rgb(173,139,49)] py-3 px-4 mt-2 rounded-md mx-4 gap-4 items-center text-center">
+      <div className="grid grid-cols-5 bg-[rgb(173,139,49)] py-4 w-full mt-2 rounded-md  items-center text-center">
         <h1 className="text-white font-bold">Product</h1>
         <h1 className="text-white font-bold">Price</h1>
         <h1 className="text-white font-bold">Quantity</h1>

@@ -67,11 +67,11 @@ const Footer = () => {
         </div>
 
         <div className='border border-white mt-2 '></div>
-           <div className='flex mx-2 gap-2'>
-        <div className='flex flex-row  gap-2 px-10 items-center justify-center mx-auto mt-2'>
+           <div className='flex w-full'>
+        <div className='flex flex-row gap-2 px-10 items-center justify-center mx-auto mt-2'>
           <h1 className='text-white cursor-pointer'>{t("Crytotec")}</h1>
 
-          <div onClick={updatesetup} className='grid grid-cols-3 gap-2 items-center border border-white h-[40px] mx-auto p-2 text-white'>
+          <div onClick={updatesetup} className='grid grid-cols-3 gap-3 items-center border border-white w-[100px] h-[40px] mx-auto p-2 text-white'>
             <img src={flag} className="w-4 h-4" alt="flag" />
             <h1 className="text-[10px]">{t("English")}</h1>
             {Up ? <FaArrowDown /> : <FaArrowUp />}
@@ -86,7 +86,7 @@ const Footer = () => {
 
         {/* Language Dropdown */}
         {Up && (
-          <div className="grid grid-cols-1 top-10 text-white text-center p-2 h-[125px] mt-1 text-xl mx-auto w-1/2 bg-orange-400  gap-1">
+          <div className="grid grid-cols-1 top-10 text-white text-center p-2 h-[130px] mt-1 text-xl mx-auto w-full bg-orange-400  gap-1">
             <h1 onClick={() => changeLanguage("en")} className="text-[10px] cursor-pointer">{t("English")}</h1>
             <h1 onClick={() => changeLanguage("yo")} className="text-[10px] cursor-pointer">{t("Yoruba")}</h1>
             <h1 onClick={() => changeLanguage("ig")} className="text-[10px] cursor-pointer">{t("Igbo")}</h1>
@@ -96,7 +96,7 @@ const Footer = () => {
 
         {/* Currency Dropdown */}
         {upto && (
-          <div className="flex flex-row items-center justify-center top-10 text-center  text-xl mx-auto w-1/4 text-white  mt-2 bg-orange-400   gap-2">
+          <div className="flex flex-row items-center justify-center  top-10 text-center  text-xl mx-auto w-full text-white  mt-2 bg-orange-400   gap-2">
             <h1 className="text-[10px] cursor-pointer">$ NGN -</h1>
             <h1 className="text-[10px] cursor-pointer">Naira</h1>
           </div>

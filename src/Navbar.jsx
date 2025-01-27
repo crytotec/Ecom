@@ -149,8 +149,21 @@ const Navbar = ({ cart = [] }) => {
                 </button>
                 <h1 className="text-white font-bold">Crytotec</h1>
                 <div className="flex items-center gap-2 text-white ">
-                    <p className="text-white">{t("Sign In")}</p>
-                    <FaPerson className="w-[20px]" />
+                  
+
+                <div onClick={() => setAccountDropdown(!accountDropdown)} className="flex relative flex-col items-start px-2 py-1 hover:border hover:border-white hover:rounded-md cursor-pointer">
+                    <div className="flex flex-row items-center gap-1">
+                        <p className="text-white grid grid-cols-1 text-[10px]">{userEmail ? `Hello, ${userEmail}` : 'Hello, Guest'}</p>
+                        {accountDropdown ? <FaAngleUp className="text-white" /> : <FaAngleDown className="text-white" />}
+                        {accountDropdown && (
+                            <div className="bg-gray-700 w-[120px] absolute z-10 top-14 text-white flex flex-col p-4 space-y-2">
+                                <ul className="space-y-2">
+                                    <li onClick={handleLogout} className="hover:underline text-[15px] duration-100">{t("Sign out")}</li>
+                                </ul>
+                            </div>
+                        )}
+                    </div>
+                </div>
                     <Link to='/Cart'>
                         <div className="relative">
                             <FaCartShopping />
@@ -171,13 +184,16 @@ const Navbar = ({ cart = [] }) => {
                         <Link to='/About'>
                         <li className="hover:underline">{t("About")}</li>
                         </Link>
+                        <Link to='./Cart'>
                         <li className="hover:underline">{t("Add to Cart")}</li>
+                        </Link>
                         <Link to='./Contact'>
                         <li className="hover:underline">{t("Contact Us")}</li>
                         </Link>
                     </ul>
                 </div>
             )}
+            
         </>
     );
 };
